@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-page1',
@@ -8,16 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class Page1Component implements OnInit {
   pageName = 'PAGE 1'
 
-  constructor() { }
-
-  ngOnInit(): void {
-    setTimeout(()=>{
-      this.pageName = 'Hey I came';
-    },5000)
+  constructor() {
   }
 
-  onButtonClick():void{
-    alert("Today::: "+ new Date());
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.pageName = 'Hey I came';
+    }, 5000)
+  }
+
+  onButtonClick(): void {
+    alert("Today::: " + new Date());
   }
 
 }
