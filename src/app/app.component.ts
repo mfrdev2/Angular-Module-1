@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {FooterComponent} from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,11 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-first-project';
+  @ViewChild("footer")
+  footer!: FooterComponent;
+
+  updateLastAccess():void{
+    this.footer.lastAccess = new Date().toDateString();
+  }
 }
 
