@@ -12,7 +12,8 @@ export class AppComponent {
   footer!: FooterComponent;
 
   updateLastAccess():void{
-    this.footer.lastAccess = new Date().toDateString();
+    let date = new Date();
+    this.footer.lastAccess = date.toDateString() +' | '+ date.toTimeString() ;
   }
 }
 
